@@ -8,42 +8,6 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
-<style>
-body {
-    background: rgba(212, 228, 239, 1);
-    background: -moz-linear-gradient(left, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212, 228, 239, 1)), color-stop(100%, rgba(134, 174, 204, 1)));
-    background: -webkit-linear-gradient(left, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
-    background: -o-linear-gradient(left, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
-    background: linear-gradient(to right, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1);
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-}
-
-.city {
-    font-size: 72px;
-    margin-top: 300px;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-.temp {
-    text-align: center;
-    font-weight: 700;
-    font-size: 32px;
-}
-
-.descr {
-    text-align: center;
-    font-weight: 400;
-    font-size: 24px;
-}
-
-
-</style>
 
 <body>
   <div class="city">
@@ -64,7 +28,11 @@ body {
 
     function getCity() {
       $.getJSON('https://ipinfo.io', function(data) {
+        if (data.city === undefined){
+          alert("error: unknown city");
+        }else{
         getWeather(data.city);
+      }
       });
     };
 
