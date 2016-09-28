@@ -47,10 +47,8 @@ body {
 
 <body>
   <div class="city">
-    City:
   </div>
   <div class="temp">
-    Temperature:
   </div>
   <div class="descr">
   </div>
@@ -82,12 +80,13 @@ body {
     }
 
     function showWeather(temp, descr, city) {
-      $(".city").append(city);
+      $(".city").append("City: " + city);
       $(".descr").append(descr);
-      $(".temp").append(temp + " C");
+      $(".temp").append("Temperature: " + temp + " C");
     };
-
-    getCity();
+    $(document).ready(function() {
+          getCity();
+        });
   </script>
 
 </body>
