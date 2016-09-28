@@ -63,7 +63,7 @@ body {
     }
 
     function getCity() {
-      $.getJSON('http://ipinfo.io', function(data) {
+      $.getJSON('https://ipinfo.io', function(data) {
         getWeather(data.city);
       });
     };
