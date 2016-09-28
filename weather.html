@@ -63,16 +63,16 @@ body {
     }
 
     function getCity() {
-//       $.getJSON('http://ipinfo.io', function(data) {
-//         getWeather(data.city);
-//       });
+      $.getJSON('http://ipinfo.io', function(data) {
+        getWeather(data.city);
+      });
     };
 
     function getWeather(city) {
       $.ajax({
         type: "GET",
         dataType: "jsonp",
-        //url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=24343a93c8b5abb03ec99a77df454b11&units=metric",
+        url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=24343a93c8b5abb03ec99a77df454b11&units=metric",
         success: function(data) {
           showWeather(data.main.temp, data.weather[0].description, city);
         }
