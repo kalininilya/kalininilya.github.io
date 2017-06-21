@@ -1,47 +1,48 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
-    width: 600px;
-    display: flex;
-    border-bottom: 3px solid black;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 100px;
+  width: 600px;
+  display: flex;
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: space-around;
 }
 
 .tower {
-    width: 5px;
-    height: 100px;
-    background-color: black;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 10px;
-    border-left: 50px solid white;
-    border-right: 50px solid white;
+  width: 5px;
+  height: 100px;
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 10px;
+  border-left: 50px solid white;
+  border-right: 50px solid white;
 }
 
 .item {
-    cursor: pointer;
-    border-radius: 10px;
-    top: 30px;
-    height: 20px;
-    background-color: white;
-    border: 3px solid rosybrown;
-    margin-top: 5px;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  cursor: pointer;
+  border-radius: 10px;
+  top: 30px;
+  height: 20px;
+  background-color: white;
+  border: 3px solid rosybrown;
+  margin-top: 5px;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
-.solve {
-    cursor: pointer;
-    margin-top: 20px;
-    border: 2x solid greenyellow;
-    border-radius: 5px;
-    outline: none;
-    background-color: transparent;
+.btn {
+  cursor: pointer;
+  margin-top: 20px;
+  border: 2px solid green;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
 }

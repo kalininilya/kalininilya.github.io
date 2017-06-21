@@ -5,18 +5,18 @@ function View(game, container) {
 }
 
 View.prototype.render = function() {
-  this.container.innerHTML = "";
+  this.container.innerHTML = '';
   for (let i = 0; i < this.game.towers.length; i++) {
-    let towerElement = document.createElement("div");
-    towerElement.className += "tower droppable";
+    let towerElement = document.createElement('div');
+    towerElement.className += 'tower droppable';
     towerElement.id = i;
 
     for (let j = 0; j < this.game.towers[i].length; j++) {
-      let itemElement = document.createElement("div");
-      if (j === 0) itemElement.className += "draggable ";
-      itemElement.className += "item";
+      let itemElement = document.createElement('div');
+      if (j === 0) itemElement.className += 'draggable ';
+      itemElement.className += 'item';
 
-      itemElement.style.width = this.game.towers[i][j] * 40 + "px";
+      itemElement.style.width = this.game.towers[i][j] * 40 + 'px';
       itemElement.id = this.game.towers[i][j];
       towerElement.appendChild(itemElement);
     }
@@ -31,7 +31,7 @@ View.prototype.animate = function(game, history) {
       try {
         game.makeMove(history[key][0], history[key][1]);
       } catch (e) {
-        console.error("Error: ", e.message);
+        console.error('Error: ', e.message);
       }
       this.render();
     }, key * 200);
@@ -43,7 +43,7 @@ const DragManager = new function() {
   const self = this;
   function onMouseDown(e) {
     if (e.which != 1) return;
-    const elem = e.target.closest(".draggable");
+    const elem = e.target.closest('.draggable');
     if (!elem) return;
     dragObject.elem = elem;
     dragObject.elem.parentId = elem.parentNode.id;
@@ -79,8 +79,8 @@ const DragManager = new function() {
       startDrag(e); // отобразить начало переноса
     }
     // отобразить перенос объекта при каждом движении мыши
-    dragObject.avatar.style.left = e.pageX - dragObject.shiftX + "px";
-    dragObject.avatar.style.top = e.pageY - dragObject.shiftY + "px";
+    dragObject.avatar.style.left = e.pageX - dragObject.shiftX + 'px';
+    dragObject.avatar.style.top = e.pageY - dragObject.shiftY + 'px';
     return false;
   }
 
@@ -109,10 +109,10 @@ const DragManager = new function() {
     const old = {
       parent: avatar.parentNode,
       nextSibling: avatar.nextSibling,
-      position: avatar.position || "",
-      left: avatar.left || "",
-      top: avatar.top || "",
-      zIndex: avatar.zIndex || ""
+      position: avatar.position || '',
+      left: avatar.left || '',
+      top: avatar.top || '',
+      zIndex: avatar.zIndex || ''
     };
     // функция для отмены переноса
     avatar.rollback = function() {
@@ -130,7 +130,7 @@ const DragManager = new function() {
     // инициировать начало переноса
     document.body.appendChild(avatar);
     avatar.style.zIndex = 9999;
-    avatar.style.position = "absolute";
+    avatar.style.position = 'absolute';
   }
 
   function findDroppable(event) {
@@ -144,7 +144,7 @@ const DragManager = new function() {
       // такое возможно, если курсор мыши "вылетел" за границу окна
       return null;
     }
-    return elem.closest(".droppable");
+    return elem.closest('.droppable');
   }
   document.onmousemove = onMouseMove;
   document.onmouseup = onMouseUp;
