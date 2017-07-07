@@ -1,0 +1,212 @@
+body {
+    color: black;
+    font-family: 'Work Sans', Arial, sans-serif;
+}
+
+a{
+    color: black;
+}
+
+b{
+    font-weight: 500;
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    width: 600px;
+    height: 90%;
+}
+
+.me{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 50px;
+}
+
+.me--about{
+    position: fixed;
+    top: 25px;
+    right: 50px;
+    display: flex;
+    height: 50px;
+}
+
+.me--about img{
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.name{
+    display: block;
+    font-size: 32px;
+}
+
+.name--about{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.about-wrapper{
+    margin: 30px;
+}
+
+.about-wrapper--about{
+    margin: 0;
+    padding-top: 11px;
+}
+
+.role{
+    display: block;
+    color: grey;
+}
+
+.portfolio-photo{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+
+.about{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 20px;
+}
+
+.about a{
+    color: #7ccaff;
+}
+
+.social{
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    font-size: 20px;
+
+    justify-content: space-around;
+}
+
+.social a{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    text-decoration: none;
+
+    align-items: center;
+}
+
+.social a:hover{
+    color: #7ccaff;
+}
+
+.social img{
+    margin-right: 10px;
+}
+
+.education {
+    padding-bottom: 30px;
+}
+
+.education-header{
+    font-weight: 400;
+}
+
+.education a{
+    color: #7ccaff;
+    transition: 0.3s;
+}
+
+.projects{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 20px;
+}
+
+.projects-header{
+    font-weight: 400;
+}
+
+.projects a{
+    color: #7ccaff;
+}
+
+
+/*sidebar*/
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 30px;
+    width: 0;
+    height: 100%;
+    background-color: #ededed;
+    transition: 0.25s;
+}
+
+.sidenav a {
+    display: block;
+    padding: 8px 8px 8px 32px;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.2s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #7ccaff;
+}
+
+.sidenav-btn {
+    position: absolute;
+    top: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.open-btn {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    content: "close";
+    transition: 0.3s;
+}
+
+.close-btn {
+    position: fixed;
+    top: 25px;
+    left: 275px;
+    content: "&#9776; close";
+    transition: 0.3s;
+}
+
+.sidenav-social{
+    position: relative;
+    bottom: -50%;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+.sidenav-social a{
+    display: flex;
+    padding-left: 0;
+    font-size: 16px;
+
+    align-content: center;
+}
+
+.sidenav-social img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+
+#main {
+    padding: 16px;
+    transition: margin-left .25s;
+}
